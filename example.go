@@ -63,8 +63,13 @@ func main() {
 		return
 	}
 
-	defer ping.Close()
-	ping.Ping()
+	err = ping.Ping()
+	if err != nil{
+		fmt.Println(err)
+	}
+	if ping.Conn != nil {
+		ping.Close()
+	}
 
 }
 

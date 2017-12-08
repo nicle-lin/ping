@@ -150,10 +150,10 @@ func (self *ping) Close() error {
 	return self.Conn.Close()
 }
 
-func (self *ping) Ping() {
+func (self *ping) Ping() error {
 	if err := self.Dail(); err != nil {
 		fmt.Println("Not found remote host")
-		return
+		return err
 	}
 	fmt.Println("Start ping from ", self.Conn.LocalAddr())
 	//TODO: set read and write timeout
@@ -169,7 +169,7 @@ func (self *ping) Ping() {
 				fmt.Printf("From %s reply: TimeOut\n", self.Dip)
 				if err := self.Dail(); err != nil {
 					fmt.Println("Not found remote host")
-					return
+					return err
 				}
 			} else {
 				fmt.Printf("From %s reply: %s\n", self.Dip, r.Error)
@@ -180,6 +180,7 @@ func (self *ping) Ping() {
 		//TODO: send packet interval
 		time.Sleep(1e9)
 	}
+	return nil
 }
 
 func (self *ping) sendPingMsg() (reply Reply) {
