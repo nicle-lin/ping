@@ -1,17 +1,16 @@
 package ping2
 
 import (
-"net"
-"time"
-"errors"
-"fmt"
-"golang.org/x/net/icmp"
-"golang.org/x/net/ipv4"
-"math/rand"
-"os"
-"sort"
+	"errors"
+	"fmt"
+	"golang.org/x/net/icmp"
+	"golang.org/x/net/ipv4"
+	"math/rand"
+	"net"
+	"os"
+	"sort"
+	"time"
 )
-
 
 type Reply struct {
 	Time float64
@@ -69,7 +68,7 @@ func sendPingMsg(host string) (reply Reply, err error) {
 	if err != nil {
 		return
 	}
-	rb := make([]byte,1500)
+	rb := make([]byte, 1500)
 	var n int
 	n, err = conn.Read(rb)
 	if err != nil {
@@ -110,9 +109,8 @@ func sendPingMsg(host string) (reply Reply, err error) {
 // count must > 2
 func Ping(ip string, count int) (loss, timeout float64, err error) {
 
-	if count <= 2 {
-		err = errors.New("count must bigger than 2")
-		return
+	if count <= 0 {
+		count = 1
 	}
 
 	var (
@@ -139,7 +137,7 @@ func Ping(ip string, count int) (loss, timeout float64, err error) {
 	}
 	loss = float64(countLoss/count) * 100
 
-	if len(avgTime) == 0{
+	if len(avgTime) == 0 {
 		duration := time.Now().Sub(start)
 		timeout = float64(duration) / float64(time.Millisecond)
 		return

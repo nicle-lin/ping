@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b0d064c-272c-4ebf-80cd-4e72328fff61" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/ping2/example/example.go" afterPath="$PROJECT_DIR$/ping2/example/example.go" />
       <change beforePath="$PROJECT_DIR$/ping2/ping_version2.go" afterPath="$PROJECT_DIR$/ping2/ping_version2.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,10 +19,10 @@
           <file leaf-file-name="ping_version2.go" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ping2/ping_version2.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="303">
-                  <caret line="59" column="16" lean-forward="false" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+                <state relative-caret-position="234">
+                  <caret line="13" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
                   <folding>
-                    <element signature="e#15#125#0" expanded="true" />
+                    <element signature="e#15#134#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -54,8 +55,8 @@
           <file leaf-file-name="example.go" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ping2/example/example.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+                <state relative-caret-position="252">
+                  <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
                   <folding>
                     <element signature="e#14#72#0" expanded="true" />
                   </folding>
@@ -101,8 +102,8 @@
         <option value="$PROJECT_DIR$/ping/ping.go" />
         <option value="$PROJECT_DIR$/ping/ping_version2.go" />
         <option value="$PROJECT_DIR$/ping/example/example.go" />
-        <option value="$PROJECT_DIR$/ping2/example/example.go" />
         <option value="$PROJECT_DIR$/ping2/ping_version2.go" />
+        <option value="$PROJECT_DIR$/ping2/example/example.go" />
       </list>
     </option>
   </component>
@@ -305,8 +306,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ping2/example/example.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="252">
+          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
           <folding>
             <element signature="e#14#72#0" expanded="true" />
           </folding>
@@ -315,10 +316,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ping2/ping_version2.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="59" column="16" lean-forward="false" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
-            <element signature="e#15#125#0" expanded="true" />
+            <element signature="e#15#134#0" expanded="true" />
           </folding>
         </state>
       </provider>

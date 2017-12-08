@@ -12,7 +12,7 @@ func main(){
 		return
 	}
 	host := os.Args[1]
-	loss, avgTime, err := ping2.Ping(host, 5)
+	loss, avgTime, err := ping2.Ping(host, 0)
 	if err != nil{
 		fmt.Println(err)
 		return
