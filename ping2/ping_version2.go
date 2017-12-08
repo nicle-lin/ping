@@ -3,7 +3,6 @@ package ping2
 import (
 "net"
 "time"
-
 "errors"
 "fmt"
 "golang.org/x/net/icmp"
@@ -19,7 +18,7 @@ type Reply struct {
 	TTL  uint8
 }
 
-var Data = []byte("abcdefghijklmnopqrstuvwabcdefghi")
+var data = []byte("abcdefghijklmnopqrstuvwabcdefghi")
 
 func lookup(host string) (string, error) {
 	addrs, err := net.LookupHost(host)
@@ -58,9 +57,9 @@ func sendPingMsg(host string) (reply Reply, err error) {
 	if err != nil {
 		return
 	}
-	conn.SetDeadline(time.Now().Add(8 * time.Second))
+	conn.SetDeadline(time.Now().Add(2 * time.Second))
 
-	wb, err := marshalMsg(8, Data)
+	wb, err := marshalMsg(8, data)
 	if err != nil {
 		return
 	}

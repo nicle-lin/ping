@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b0d064c-272c-4ebf-80cd-4e72328fff61" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ping2/example/example.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ping2/ping_version2.go" />
-      <change beforePath="$PROJECT_DIR$/example.go" afterPath="$PROJECT_DIR$/ping/example/example.go" />
+      <change beforePath="$PROJECT_DIR$/ping2/ping_version2.go" afterPath="$PROJECT_DIR$/ping2/ping_version2.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,10 +18,10 @@
           <file leaf-file-name="ping_version2.go" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ping2/ping_version2.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="487">
-                  <caret line="148" column="25" lean-forward="false" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
+                <state relative-caret-position="303">
+                  <caret line="59" column="16" lean-forward="false" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
                   <folding>
-                    <element signature="e#15#126#0" expanded="true" />
+                    <element signature="e#15#125#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -89,6 +87,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>timeout</find>
+      <find>setdead</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
@@ -316,10 +315,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ping2/ping_version2.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="148" column="25" lean-forward="false" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
+        <state relative-caret-position="303">
+          <caret line="59" column="16" lean-forward="false" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
           <folding>
-            <element signature="e#15#126#0" expanded="true" />
+            <element signature="e#15#125#0" expanded="true" />
           </folding>
         </state>
       </provider>
