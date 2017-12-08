@@ -68,12 +68,12 @@ func NewIPHeader(tos, ttl int) *IPHeader {
 	return &IPHeader{TOS: tos, TTL: ttl}
 }
 
-func NewParams(persist bool, sip ,dip string, count int) *Params {
+func NewParams(persist bool, sip ,dip string, count int) (*Params,error) {
 	dip, err := Lookup(dip)
 	if err != nil {
-		fmt.Println("Lookup error:",err)
+		return nil,err
 	}
-	return &Params{Persist: persist, Sip: sip, Dip: dip, Count: count}
+	return &Params{Persist: persist, Sip: sip, Dip: dip, Count: count},err
 }
 
 func NewPing(req int, data []byte, ipheader *IPHeader, params *Params) (*ping, error) {
@@ -156,7 +156,6 @@ func (self *ping) Ping() error {
 		return err
 	}
 	fmt.Println("Start ping from ", self.Conn.LocalAddr())
-	//TODO: set read and write timeout
 	self.SetDeadline(10)
 
 	if self.Persist == true {
@@ -167,9 +166,9 @@ func (self *ping) Ping() error {
 		if r.Error != nil {
 			if opt, ok := r.Error.(*net.OpError); ok && opt.Timeout() {
 				fmt.Printf("From %s reply: TimeOut\n", self.Dip)
+				// retry again
 				if err := self.Dail(); err != nil {
 					fmt.Println("Not found remote host")
-					return err
 				}
 			} else {
 				fmt.Printf("From %s reply: %s\n", self.Dip, r.Error)
@@ -177,13 +176,17 @@ func (self *ping) Ping() error {
 		} else {
 			fmt.Printf("From %s reply: time=%d ttl=%d\n", self.Dip, r.Time, r.TTL)
 		}
-		//TODO: send packet interval
-		time.Sleep(1e9)
+		time.Sleep(time.Second)
 	}
 	return nil
 }
 
 func (self *ping) sendPingMsg() (reply Reply) {
+	if self.Conn == nil{
+		reply.Error = errors.New("Not established connection")
+		return
+	}
+	self.SetDeadline(10)
 	start := time.Now()
 
 	self.SetTOS()
@@ -218,7 +221,6 @@ func (self *ping) sendPingMsg() (reply Reply) {
 	if reply.Error != nil {
 		return
 	}
-
 	switch rm.Type {
 	case ipv4.ICMPTypeEchoReply:
 		t := int64(duration / time.Millisecond)

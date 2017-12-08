@@ -55,7 +55,12 @@ func main() {
 
 	host := flag.Args()[0]
 	ipHeader := ping.NewIPHeader(*tos, *ttl)
-	params := ping.NewParams(*persist, *sip,host, *count)
+	params,err := ping.NewParams(*persist, *sip,host, *count)
+	if err != nil{
+		fmt.Println(err)
+		return
+	}
+
 
 	ping, err := ping.NewPing(8, Data, ipHeader, params)
 	if err != nil {
@@ -66,6 +71,7 @@ func main() {
 	err = ping.Ping()
 	if err != nil{
 		fmt.Println(err)
+		return
 	}
 	if ping.Conn != nil {
 		ping.Close()
