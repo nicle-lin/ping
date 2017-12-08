@@ -56,6 +56,7 @@ func sendPingMsg(host string) (reply Reply, err error) {
 	if err != nil {
 		return
 	}
+	defer conn.Close()
 	conn.SetDeadline(time.Now().Add(2 * time.Second))
 
 	wb, err := marshalMsg(8, data)

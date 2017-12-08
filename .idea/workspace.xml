@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b0d064c-272c-4ebf-80cd-4e72328fff61" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ping2/example/example.go" afterPath="$PROJECT_DIR$/ping2/example/example.go" />
-      <change beforePath="$PROJECT_DIR$/ping2/ping_version2.go" afterPath="$PROJECT_DIR$/ping2/ping_version2.go" />
-    </list>
+    <list default="true" id="4b0d064c-272c-4ebf-80cd-4e72328fff61" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +167,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../gsn/idc_itss" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
   </component>
